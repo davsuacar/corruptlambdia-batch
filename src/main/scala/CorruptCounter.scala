@@ -14,6 +14,6 @@
       new CorruptPayment(arr(0), Integer.parseInt(arr(1)), Integer.parseInt(arr(2)))
     })
 
-    corruptPaymnentRDD.map(x => (x.name, x.payment)).reduceByKey(_ + _).saveAsTextFile("/tmp/corrupt/result.txt")
+    corruptPaymnentRDD.map(x => (x.name, x.payment)).reduceByKey(_ + _).saveAsTextFile("/tmp/corrupt/batch")
   }
 
